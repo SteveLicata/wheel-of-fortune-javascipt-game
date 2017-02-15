@@ -82,79 +82,71 @@ $(document).ready(function(){
 
     //play button click function
     playButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    console.log('play button clicked');
+      e.preventDefault();
+      console.log('play button clicked');
 
-    //saves random number in variable
-    random = Math.random();
-    //same variable holds its value times the length of the game array
-    random = random * gameArr.length;
-    //arrayIndex holds the random number rounded to a whole number
-    arrayIndex = Math.floor(random);
+      //saves random number in variable
+      random = Math.random();
+      //same variable holds its value times the length of the game array
+      random = random * gameArr.length;
+      //arrayIndex holds the random number rounded to a whole number
+      arrayIndex = Math.floor(random);
 
-    //currentGame holds randomly generated index of array of games so a random game gnerates each time a new game is started
-    currentGame = gameArr[arrayIndex];
-    console.log(currentGame);
+      //currentGame holds randomly generated index of array of games so a random game gnerates each time a new game is started
+      currentGame = gameArr[arrayIndex];
+      console.log(currentGame);
 
-    //the commented code below works to generate a single random game, but the index is needed to apply to game hints, so the hints line up with the game when a game starts
-    //  = gameArr[Math.floor(Math.random()*gameArr.length)];
+      // firstHint holds randomly generated index of array of hints to make sure the hint is for the correct game
+      firstHint = hintArr[arrayIndex];
+      console.log(firstHint);
 
-    // firstHint holds randomly generated index of array of hints to make sure the hint is for the correct game
-    firstHint = hintArr[arrayIndex];
-    console.log(firstHint);
+      // secondHint holds randomly generated index of array of seconary hints to make sure the hint is for the correct game
+      secondHint = hintArrTwo[arrayIndex];
+      console.log(secondHint);
 
-    //the commented code below works to generate a single random hint, but the index is needed to make sure games and hints are lined up
-    // = hintOne[Math.floor(Math.random()*hintOne.length)];
+      //newGame holds string of currentGame
+      newGame = currentGame.toString();
+      console.log(newGame);
 
-    // secondHint holds randomly generated index of array of seconary hints to make sure the hint is for the correct game
-    secondHint = hintArrTwo[arrayIndex];
-    console.log(secondHint);
+      //displayHint holds string of first hint
+      displayHint = firstHint.toString();
+      console.log(displayHint);
 
-    //newGame holds string of currentGame
-    newGame = currentGame.toString();
-    console.log(newGame);
+      //wordSplit holds an array of individual letters of current game word
+      wordSplit = currentGame.split('');
+      console.log(wordSplit);
 
-    //displayHint holds string of first hint
-    displayHint = firstHint.toString();
-    console.log(displayHint);
+      //loop length of 'wordSplit' array and fill array with placeholders for each letter
+      for (var i = 0; i < wordSplit.length; i++) {
+        //placeHolder creates NEW span element
+        var placeHolder = document.createElement('span');
 
+        //adding images as placeholders to new span text
+        placeHolder.innerHTML = `<img src=stylesheets/css/vanna.jpg height="75px" width="75px" class="img-thumbnail">`;
 
-    //Credit to Kenza for this part:
-    //wordSplit holds an array of individual letters of current game word
-    wordSplit = currentGame.split('');
-    console.log(wordSplit);
+        //adds child element spans containing 'image' to h2 on DOM to represent each letter of puzzle
+        gameTag.appendChild(placeHolder);
+      };//end for loop
 
-    //loop length of 'wordSplit' array and fill array with placeholders for each letter
-    for (var i = 0; i < wordSplit.length; i++) {
-      //placeHolder creates NEW span element
-      var placeHolder = document.createElement('span');
+      //adds new span content to variable children
+      children = gameTag.childNodes;
 
-      //adding images as placeholders to new span text
-      placeHolder.innerHTML = `<img src=stylesheets/css/vanna.jpg height="75px" width="75px" class="img-thumbnail">`;
+      //append hint to DOM
+      hintSpot.textContent = displayHint;
 
-      //adds child element spans containing 'image' to h2 on DOM to represent each letter of puzzle
-      gameTag.appendChild(placeHolder);
-    };
+      //display entry form to enter letter or solve puzzle
+      entryForm.style.display = "block";
+      // display category name
+      categoryName.style.display = "block";
 
-    //adds new span content to variable children
-    children = gameTag.childNodes;
-    //end Kenza credit
-
-    //append hint to DOM
-    hintSpot.textContent = displayHint;
-
-    //display entry form to enter letter or solve puzzle
-    entryForm.style.display = "block";
-    // display category name
-    categoryName.style.display = "block";
-
-    //hide play button
-    playButton.style.display = "none";
+      //hide play button
+      playButton.style.display = "none";
 
   })//end click event
 
 };//end randomGame function
 
+//call randomGame function
 randomGame();
 
 
@@ -222,8 +214,6 @@ solveButton.addEventListener('click', function(e) {
     var letterGuess = userInput.value;
     console.log(letterGuess);
 
-    //credit to Matt & Kenza for this next part
-
     //empty variable to hold messages to append to user
     var msg = "";
 
@@ -252,7 +242,7 @@ solveButton.addEventListener('click', function(e) {
       }
     };//ends if statement
 
-    //appends whatever the appropriate message is to the DOM - error for more than 1 letter, good guess if it's a match, or letter is not in puzzle and try again/
+    //appends whatever the appropriate message is to the DOM - error for more than 1 letter, good guess if it's a match, or letter is not in puzzle and try again
     response.innerText = msg;
 
     //count clicks to append message that game is over and remove buttons after 10 clicks
