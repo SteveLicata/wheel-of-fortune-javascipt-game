@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Compiled and minified CSS MATERIALIZE/-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <!-- jQuery UI CSS CDN: -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Inline|Bungee+Shade|Freckle+Face|Luckiest+Guy" rel="stylesheet">
+    <!-- my css file -->
+    <link rel="stylesheet" href="stylesheets/css/WOF.css">
+    <title>Wheel Of Fortune</title>
+  </head>
+  <body>
+
+    <div class="container offset s6">
+
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <h2 id="title">Wheel Of Fortune!</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <h2 id="category-name">Musical Instruments</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m12 l12">
+
+          <h2 id="game-tag"></h2>
+
+          <h2 id="hint-location"></h2>
+
+          <p id='wrong'></p>
+
+          <button id="play-button" type="button" name="button">Play A Game!</button>
+
+          <div id="entry-form">
+            <form action="index.html" method="post">
+              <h4>Enter a Letter:</h4>
+
+              <input id="letter-input" type="text" name="" value="">
+              <br>
+
+              <button id="input-button" type="button" name="button">Submit!</button>
+
+              <h4>Solve the Puzzle:</h4>
+
+              <input id="solve-input" type="text" name="" value="">
+              <br>
+
+              <button id="solve-button" type="button" name="button">Solve!</button>
+              <br>
+
+              <button id="show-answer"type="button" name="button" align="center">Show Answer</button>
+              <br>
+
+              <button id="new-game-button" type="button" name="button"><a href="WOF.html"></a>Start New Game</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <img class="wofimg"  src="stylesheets/css/wheel_of_fortune_25th_anniversary_deluxe_edition_by_wheelgenius-d6e00cn.png" alt="">
+        </div>
+      </div>
+
+    <h3>Guess a letter, or solve the puzzle. There are hints to help gameplay. After 10 failed tries, Game Over.</h3>
+
+    <audio src="WOF-theme-song.mp3" autoplay="on" loop="on" controls=""></audio>
+
+
+  </div>
+
+    <!-- Compiled and minified JavaScript  MATERIALIZE-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- jQuery UI JS CDN: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <!-- my js file -->
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>

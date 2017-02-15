@@ -1,0 +1,106 @@
+//color variables
+$header: gold;
+$alert: red;
+$white: white;
+$blue: blue;
+$orange: orange;
+$silver: silver;
+$black: black;
+$gametag: #FFFF00;
+
+//text variables
+$funkytext: 'Luckiest Guy', cursive;
+$mainheader: 'Bungee Shade', cursive;
+
+//common text size
+$fontsize: 30px;
+
+//partial
+@import 'div';
+
+
+body {
+  text-align: center;
+  // background-image: url("giphy.gif");
+  background-size: cover;
+  background:
+  linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+  // http://lea.verou.me/css3patterns/#carbon
+}
+
+//WOF header
+h1 {
+  font-size: 40px;
+  color: $header;
+  font-family: $mainheader;
+}
+
+//category header
+#category {
+  font-family: $funkytext;
+  color: $alert;
+  font-size: $fontsize;
+}
+
+//category name header
+#category-name {
+  font-family: $funkytext;
+  color: $blue;
+  font-size: 25px;
+}
+
+//gameplay header
+h3 {
+  font-size: 20px;
+  color: $orange;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+//hint location
+#hint-location {
+  font-size: $fontsize;
+  color: $silver;
+  font-family: $funkytext;
+}
+
+//game location
+#game-tag {
+  font-family: 'Bungee', cursive;
+  font-size: 50px;
+  color: $gametag;
+  font-weight:bolder;
+}
+
+//messages to user
+#wrong {
+  font-size: $fontsize;
+  color: $alert;
+  font-family: $funkytext;
+}
+
+//makes input box text black
+#letter-input, #solve-input {
+  color: $white;
+}
+
+
+.wofimg {
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+  transition-duration: 0.8s;
+  transition-property: transform;
+}
+// spin image on hover
+.wofimg:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+}

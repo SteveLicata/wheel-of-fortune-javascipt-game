@@ -1,0 +1,65 @@
+div h4, div h4 {
+  color: white;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: bold; }
+
+body {
+  text-align: center;
+  background-size: cover;
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px; }
+
+h2 {
+  font-size: 40px;
+  color: gold;
+  font-family: "Bungee Shade", cursive; }
+
+#category {
+  font-family: "Luckiest Guy", cursive;
+  color: red;
+  font-size: 30px; }
+
+#category-name {
+  font-family: "Luckiest Guy", cursive;
+  color: blue;
+  font-size: 30px; }
+
+h3 {
+  font-size: 20px;
+  color: orange;
+  font-family: sans-serif;
+  font-weight: bold; }
+
+#hint-location {
+  font-size: 30px;
+  color: blue;
+  font-family: "Luckiest Guy", cursive; }
+
+#game-tag {
+  font-family: 'Bungee', cursive;
+  font-size: 50px;
+  color: #FFFF00;
+  font-weight: bolder; }
+
+#wrong {
+  font-size: 22px;
+  color: red;
+  font-family: "Luckiest Guy", cursive; }
+
+#letter-input, #solve-input {
+  color: white; }
+
+.wofimg {
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+  transition-duration: 0.8s;
+  transition-property: transform; }
+
+.wofimg:hover {
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg); }
+
+/*# sourceMappingURL=WOF.css.map */
