@@ -49,15 +49,18 @@ $(document).ready(function(){
   var game10 = "triangle";
   var game11 = "violin";
   var game12 = "trombone";
+  var game13 = "cowbell";
+  var game14 = "trumpet";
+  var game15 = "harp";
 
   //array of games
-  var gameArr = [game1, game2, game3, game4, game5, game6, game7, game8, game9, game10, game11, game12];
+  var gameArr = [game1, game2, game3, game4, game5, game6, game7, game8, game9, game10, game11, game12, game13, game14, game15];
 
   //array of initial hints
-  var hintArr = ["Hint: 'Solid or Hollow' ", "Hint: 'Stay on Beat'", "Hint: 'Cool Cats Play This'", "Hint: 'Smile When Playing This'", "Hint: 'Play With Your Fingers'", "Hint: 'Similar To Piano'", "Hint: 'Crash!'", "Hint: 'Play With Your Mouth'", "Hint: 'Low Frequency'", "Hint: 'Mathematical Shape'", "Hint: 'Pluck or Bow'", "Hint: 'Powerful Brass'"];
+  var hintArr = ["Hint: 'Solid or Hollow' ", "Hint: 'Stay on Beat'", "Hint: 'Cool Cats Play This'", "Hint: 'Smile When Playing This'", "Hint: 'Play With Your Fingers'", "Hint: 'Similar To Piano'", "Hint: 'Crash!'", "Hint: 'Play With Your Mouth'", "Hint: 'Low Frequency'", "Hint: 'Mathematical Shape'", "Hint: 'Pluck or Bow'", "Hint: 'Powerful Brass'", "Hint: 'Farm Animal'", "Hint: 'Lead Brass'", "Hint: 'Large, Angled String Instrument'"];
 
   //array of secondary hints
-  var hintArrTwo = ["Last Hint! ...6 Strings", "Last Hint! ...Hit This Instrument", "Last Hint! ...Bill Clinton, Lisa Simpson, Kenny G", "Last Hint! ...Hawaiian Music", "Last Hint! ...Black + White = 88", "Last Hint! ...Vibes or Bells", "Last Hint! ...Ride or Hi-Hat", "Last Hint! ...Blow or Inhale Into", "Last Hint! ...Slap or Pluck", "Last Hint! ...Ding!", "Last Hint! ...Orchestral Lead", "Last Hint! ...Long Slide"];
+  var hintArrTwo = ["Last Hint! ...6 Strings", "Last Hint! ...Hit This Instrument", "Last Hint! ...Bill Clinton, Lisa Simpson, Kenny G", "Last Hint! ...Hawaiian Music", "Last Hint! ...Black + White = 88", "Last Hint! ...Vibes or Bells", "Last Hint! ...Ride or Hi-Hat", "Last Hint! ...Blow or Inhale Into", "Last Hint! ...Slap or Pluck", "Last Hint! ...Ding!", "Last Hint! ...Orchestral Lead", "Last Hint! ...Long Slide", "Last Hint! ...Moo", "Last Hint! ...'Taps' Instrument", "Last Hint! ...Dream-Like Sound"];
 
   //empty variables
   var random;
